@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#151b15">
+<title>怪物围城</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app" aria-label="怪物围城">
+ <section id="arena" hidden aria-label="竞技场">
+  <header id="hud"></header>
+  <div class="canvas-wrap"><canvas width="1280" height="600" aria-label="战斗竞技场"></canvas><div id="boss"></div><div id="wave-notice"></div></div>
+  <footer id="combat-footer"></footer>
+  <div id="touch-controls" hidden>
+   <div id="joystick" role="group" aria-label="移动摇杆">
+    <span class="stick-north" aria-hidden="true">▴</span>
+    <span class="stick-east" aria-hidden="true">▸</span>
+    <span class="stick-south" aria-hidden="true">▾</span>
+    <span class="stick-west" aria-hidden="true">◂</span>
+    <span id="stick-knob" aria-hidden="true"></span>
+   </div>
+   <span class="touch-hint">拖动摇杆移动</span>
+  </div>
+ </section>
+ <section id="screen" aria-live="off"></section>
+ <div id="toast" role="status" hidden></div>
+</main>
+<script src="data.js"></script>
+<script src="engine.js"></script>
+<script src="render.js"></script>
+<script src="ui.js"></script>
+</body>
+</html>
